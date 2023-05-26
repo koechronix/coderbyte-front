@@ -1,13 +1,13 @@
-import london from '../assets/images/london.jpeg';
-import auckland from '../assets/images/auckland.jpeg';
-import vancouver from '../assets/images/vancouver.jpeg';
+import power from '../assets/images/power.jpeg';
+import focus from '../assets/images/focus.jpeg';
+import habits from '../assets/images/focus.jpeg';
 
 
 const shows = [
     {
         "id": 1,
         "title": "The way to Power",
-        "image": london,
+        "image": power,
         "price": 300,
         "quantity": 1,
         "city": "Nyayo, Nairobi",
