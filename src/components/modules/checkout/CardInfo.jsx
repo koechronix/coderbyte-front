@@ -7,7 +7,7 @@ const CardInfo = () => {
   const [isCorrectCvc, setCorrectCvc] = useState({ status: false, id: "" });
   const { payment, deletePayment, setIsOpenPaymentForm, setCardToEdit } =
     usePayment();
-    const [selectedCard, setSelectedCard] = useState(payment[0]?.id);
+  const [selectedCard, setSelectedCard] = useState(payment[0]?.id);
 
   return (
     <>
@@ -17,7 +17,12 @@ const CardInfo = () => {
           className="border mb-2 border-slate-300 p-4 rounded-[3px] bg-sky-100"
         >
           <div className="flex flex-col items-start gap-y-2 sm:gap-y-0 sm:flex-row gap-x-4">
-            <input type="radio" name="card" checked={p?.id === selectedCard} onChange={() => setSelectedCard(p?.id)} />
+            <input
+              type="radio"
+              name="card"
+              checked={p?.id === selectedCard}
+              onChange={() => setSelectedCard(p?.id)}
+            />
             <div>
               <div className="flex gap-x-4">
                 <p>VISA - {p?.id}</p>
