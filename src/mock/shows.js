@@ -15,7 +15,7 @@ const shows = [
     {
         "id": 2,
         "title": "Hyper Focus",
-        "image": auckland,
+        "image": focus,
         "price": 400,
         "quantity": 1,
         "city": "Kasarani, Nairobi",
@@ -23,7 +23,7 @@ const shows = [
     {
         "id": 3,
         "title": "Atomic Habits",
-        "image": vancouver,
+        "image": habits,
         "price": 500,
         "quantity": 1,
         "city": "Jogoo, Nairobi",
