@@ -9,7 +9,7 @@ const Modal = ({ paymentProcessing }) => {
           {paymentProcessing ? "Payment Processing..." : "Payment Processed!"}
         </h1>
 
-        <p className="flex justify-center">
+        <p className="flex justify-end">
           {paymentProcessing ? (
             <Oval
               height={72}
