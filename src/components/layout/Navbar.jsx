@@ -36,7 +36,7 @@ const Navbar = () => {
                 <h3 className="font-bold text-red-700">My Cart</h3>
                 <p className="text-gray-500">
                   {numberOfItemsInCart}{" "}
-                  {numberOfItemsInCart <= 1 ? "item" : "items"}
+                  {numberOfItemsInCart <= 0 ? "item" : "items"}
                 </p>
               </div>
             </div>

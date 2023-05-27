@@ -15,7 +15,7 @@ const Shows = () => {
   return (
     <div className="py-20">
       <PageWrapper>
-        <h2 className="mb-10 text-2xl font-bold tracking-wide text-center text-gray-500 uppercase">
+        <h2 className="mb-10 text-2xl font-bold tracking-wide text-center text-green-500 upperc">
           Upcoming shows
         </h2>
         <div className="grid grid-cols-1 gap-5 md:gap-20 md:grid-cols-2 lg:grid-cols-3">
