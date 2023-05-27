@@ -67,22 +67,11 @@ const Invoice = () => {
                   <p>${(item.price * item.quantity).toFixed(2)}</p>
                 </div>))}
               </div>
-              <div>
-                <h4 className="mb-2 text-base font-semibold">Fees</h4>
-                <div className="flex justify-between text-sm">
-                  <p>Service Fee: $0.00</p>
-                  <p>$0.00</p>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <p>Order Processing Fee</p>
-                  <p>$0.00</p>
-                </div>
-              </div>
             </div>
           )}
 
           <div className="flex flex-col text-sm gap-y-3">
-            <p>*All Sales Final - No Refunds or Exchanges</p>
+            <p>*All Sales Final - No Refunds </p>
             <div className="flex items-center gap-x-1">
               <input 
                 type="checkbox" 
@@ -94,13 +83,17 @@ const Invoice = () => {
                 <span className="text-primary-200">Terms of Use</span>.
               </label>
             </div>
-            <button 
-              onClick={handlePlaceOrder}
-              className={`px-3.5 py-2  text-base text-white rounded-sm ${isChecked && payment?.length ? "bg-primary-150":'bg-primary-150/40 cursor-not-allowed'}`}
-              disabled={!isChecked}
-            >
-              Place Order
-            </button>
+            <button
+  onClick={handlePlaceOrder}
+  className={`px-3.5 py-2 text-base rounded-sm ${
+    isChecked && payment?.length
+      ? 'bg-primary-150 text-white'
+      : 'bg-primary-150/40 cursor-not-allowed'
+  }`}
+  disabled={!isChecked}
+>
+  Place Order
+</button>
             <p className="text-xs font-semibold">
               *Exceptions may apply, see our Terms of Use.
             </p>
