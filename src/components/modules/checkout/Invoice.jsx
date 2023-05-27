@@ -42,8 +42,6 @@ const Invoice = () => {
     }, 5000)
   }
 
-  
-
   return (
     <>
     {showModal && <Modal paymentProcessing={paymentProcessing} />}

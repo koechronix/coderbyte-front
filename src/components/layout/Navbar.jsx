@@ -29,11 +29,11 @@ const Navbar = () => {
             onClick={handleCartClick}
           >
             <div className="flex gap-x-2 items-center">
-              <div className="w-12 h-12 p-2 bg-gray-200 rounded-full">
+              <div className="w-12 h-12 p-2 bg-gray-200 ">
                 <Cart className="w-full h-full" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-700">My Cart</h3>
+                <h3 className="font-bold text-red-700">My Cart</h3>
                 <p className="text-gray-500">
                   {numberOfItemsInCart}{" "}
                   {numberOfItemsInCart <= 1 ? "item" : "items"}
