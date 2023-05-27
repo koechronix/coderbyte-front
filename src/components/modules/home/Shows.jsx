@@ -4,13 +4,51 @@ import { useCart } from "../../../context/cart";
 import shows from "../../../mock/shows";
 
 const Shows = () => {
+  const { setcart, cart } = useCart();
   const [upcomingShows, setUpcomingShows] = useState([]);
 
   useEffect(() => {
     setUpcomingShows(shows);
   }, []);
 
-  const { setcart, cart } = useCart();
+  const handleQuantityChange = (event, upcomingShow) => {
+    const selectedShow = cart?.items?.find((e) => e.id === upcomingShow.id);
+    const quantity = parseInt(event.target.value);
+
+    if (selectedShow) {
+      setcart((item) => ({
+        ...item,
+        items: item?.items?.map((item) =>
+          item.id === upcomingShow.id ? { ...item, quantity } : item
+        ),
+      }));
+    } else {
+      setcart((item) => ({
+        ...item,
+        items: item?.items
+          ? [...item.items, { ...upcomingShow, quantity }]
+          : [{ ...upcomingShow, quantity }],
+      }));
+    }
+  };
+
+  const handleCartButtonClick = (upcomingShow) => {
+    const selectedShow = cart?.items?.find((item) => item.id === upcomingShow.id);
+
+    if (selectedShow) {
+      setcart((item) => ({
+        ...item,
+        items: item?.items?.filter((item) => item.id !== upcomingShow.id),
+      }));
+    } else {
+      setcart((item) => ({
+        ...item,
+        items: item?.items
+          ? [...item.items, { ...upcomingShow, quantity: 1 }]
+          : [{ ...upcomingShow, quantity: 1 }],
+      }));
+    }
+  };
 
   return (
     <div className="py-20">
@@ -19,10 +57,10 @@ const Shows = () => {
           Upcoming shows
         </h2>
         <div className="grid grid-cols-1 gap-5 md:gap-20 md:grid-cols-2 lg:grid-cols-3">
-          {upcomingShows.map(upcomingShow => (
+          {upcomingShows.map((upcomingShow) => (
             <div
               key={upcomingShow.id}
-              className="border border-slate-200 bg-white p-1.5 rounded-[3px]"
+              className="border border-slate-200 bg-green p-1.5 rounded-[3px]"
             >
               <div className="h-40 md:h-[130px] block">
                 <img
@@ -32,7 +70,7 @@ const Shows = () => {
                 />
               </div>
               <div className="py-2 rounded-[3px] p-2 px-1.5 flex flex-col gap-y-2">
-                <h1 className="text-lg font-semibold text-gray-700 capitalize">
+                <h1 className="text-lg font-semibold text-green-700 capitalize">
                   {upcomingShow.title}
                 </h1>
                 <p className="text-sm text-primary-350">{upcomingShow.city} • {upcomingShow.country}</p>
@@ -41,71 +79,21 @@ const Shows = () => {
                   <div className="flex items-center gap-x-2">
                     <p>Quantity</p>
                     <select
-                      value={
-                        cart?.items?.find((e) => e.id === upcomingShow.id)
-                          ?.quantity || 1
-                      }
-                      onChange={(event) => {
-                        if (cart?.items?.find((item) => item.id === upcomingShow.id)) {
-                          setcart((item) => {
-                            return {
-                              ...item,
-                              items: item?.items?.map((item) =>
-                                item.id === upcomingShow.id
-                                  ? { ...item, quantity: parseInt(event.target.value) }
-                                  : item
-                              ),
-                            };
-                          });
-                        }else{
-                          setcart((item) => {
-                            return {
-                              ...item,
-                              items: item?.items
-                                ? [...item.items, { ...upcomingShow, quantity:  parseInt(event.target.value) }]
-                                : [{ ...upcomingShow, quantity: parseInt(event.target.value) }],
-                            };
-                          });
-                        }
-                       
-                      }}
-                      className="my-1 active:scale-95 bg-opacity-95 hover:bg-opacity-100 text-gray-700 outline-none border border-gray-300 px-3 py-1.5  leading-4 font-medium  text-xs bg-gray-200 rounded-sm"
+                      value={cart?.items?.find((e) => e.id === upcomingShow.id)?.quantity || 0}
+                      onChange={(event) => handleQuantityChange(event, upcomingShow)}
                     >
-                      <option value={1}>1</option>
-                      <option value={2}>2</option>
-                      <option value={3}>3</option>
-                      <option value={4}>4</option>
-                      <option value={5}>5</option>
-                      <option value={6}>6</option>
+                      {[1, 2, 3, 4, 5, 6].map((value) => (
+                        <option key={value} value={value}>{value}</option>
+                      ))}
                     </select>
                   </div>
                   <button
-                    onClick={() => {
-                      if (cart?.items?.find((item) => item.id === upcomingShow.id)) {
-                        setcart((item) => {
-                          return {
-                            ...item,
-                            items: item?.items?.filter(
-                              (item) => item.id !== upcomingShow.id
-                            ),
-                          };
-                        });
-                      } else {
-                        setcart((item) => {
-                          return {
-                            ...item,
-                            items: item?.items
-                              ? [...item.items, { ...upcomingShow, quantity: 1 }]
-                              : [{ ...upcomingShow, quantity: 1 }],
-                          };
-                        });
-                      }
-                    }}
-                    className="my-1 active:scale-95 bg-opacity-95 hover:bg-opacity-100 text-white px-3 py-[6px]  leading-4 font-medium  text-[12px] bg-primary-100 rounded-[2px]"
+                    onClick={() => handleCartButtonClick(upcomingShow)}
+                    className="my-1 active:scale-95  hover:bg-opacity-100 text-green px-3 py-[6px]  leading-4 font-medium  text-[12px] bg-primary-100 rounded-[2px]"
                   >
                     {cart?.items?.find((item) => item.id === upcomingShow.id)
-                      ? "Remove from cart"
-                      : "add to cart"}
+                      ? "Remove [-]"
+                      : "Add [+]"}
                   </button>
                 </div>
               </div>
