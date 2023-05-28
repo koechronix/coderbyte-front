@@ -47,6 +47,11 @@ npm run dev
 
 [ click the link, that is display on your terminal]
 
+## Project Pictures 
+![Frontpage](./src/assets/images/main.png)
+![Payment](./src/assets/images/payment1.png)
+![cart](./src/assets/images/cart.png)
+
 ## Usage
 
 Once the coderbyte ticket purchase app is running , you can perform the following actions:
@@ -67,7 +72,7 @@ Once the coderbyte ticket purchase app is running , you can perform the followin
 ## Licence 
 The Coderbyte Ticket Purchase app is open source under the 
 [MIT](https://choosealicense.com/licenses/mit/)
-Feel free to mpdify and distribute the app as per the terms of the licence.
+Feel free to modify and distribute the app as per the terms of the licence.
 
 ## Contact
 For any questions or inquiries,please contact the project maintainer:
