@@ -6,9 +6,9 @@
 ## Features
 
 - Event browsing: Users can select ticket from all upcoming show.
-- Quantity: Users can select their desired quantity(number of tickets) they wish to buy using [+]     button and also they can decrement the quantity(number of ticket) by using [-] on the user interface.
+- Quantity: Users can select their desired quantity(number of tickets) they wish to buy using Add[+]     button and also they can decrement the quantity(number of ticket) by using Remove[-] on the user interface.
 - Payment Information: Users can enter their credentials of Credit/ Debit card just after placing the order.
-- Checkout information: Users can be able to see the final cost in ($) before checking out or placing an order.
+- Checkout information: Users can be able to see the final cost in (Ksh) before checking out or placing an order.
 
 ## Tech Stack
 - React + Vite
