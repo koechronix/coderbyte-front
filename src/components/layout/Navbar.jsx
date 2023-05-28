@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import PageWrapper from "./PageWrapper";
 import { useCart } from "../../context/cart";
@@ -19,9 +18,12 @@ const Navbar = () => {
       <PageWrapper>
         <div className="flex flex-col items-center justify-center sm:flex-row sm:items-center sm:justify-between">
           <Link to="/" className="logo-link">
-            <h1 className="relative text-primary-100 font-logo text-2xl">
-              Ticket Master
-            </h1>
+            <img
+              src="https://www.billboard.com/wp-content/uploads/media/ticketmaster-logo-2018-billboard-1548.jpg"
+              alt="Logo"
+              className="logo-image"
+              style={{ width: '180px', height: 'auto' }}
+            />
           </Link>
           <Link
             to={cart?.items?.length ? "/checkout" : "#"}
@@ -29,7 +31,7 @@ const Navbar = () => {
             onClick={handleCartClick}
           >
             <div className="flex gap-x-2 items-center">
-              <div className="w-12 h-12 p-2 bg-gray-200 ">
+              <div className="w-12 h-12 p-2 bg-gray-200">
                 <Cart className="w-full h-full" />
               </div>
               <div>

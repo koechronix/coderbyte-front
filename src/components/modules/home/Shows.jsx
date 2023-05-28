@@ -82,7 +82,7 @@ const Shows = () => {
                       value={cart?.items?.find((e) => e.id === upcomingShow.id)?.quantity || 0}
                       onChange={(event) => handleQuantityChange(event, upcomingShow)}
                     >
-                      {[1, 2, 3,].map((value) => (
+                      {[1, 2, 3].map((value) => (
                         <option key={value} value={value}>{value}</option>
                       ))}
                     </select>
