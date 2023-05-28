@@ -45,5 +45,33 @@ npm run dev
 
 5. Open the app in your browser:
 
-[ click the link, that is display on your terminal
-]
+[ click the link, that is display on your terminal]
+
+## Usage
+
+Once the coderbyte ticket purchase app is running , you can perform the following actions:
+
+- Browse the list of available upcoming shows.
+- Select the desired number of tickets and place an order.
+- See the final cost of ticket before checking out.
+- Enter the payment information (not yet integrated with credit/credit).
+
+ ## Contributing
+- Contribution to the corderbyte Ticket Purchase App are welcome. If you find any issues or have suggestions for improvements, plase open an issue or submit a pull request.
+
+## Future Plans
+- Initiate authentication: Users will be able to create accounts, log in and manage their profiles.
+- Initiate order history: Users willbe able to view their past orders and check ticket details.
+- Initiate payment: Users will be able to pay their tickets using Credit/Debit cards, M-Pesa, and Paypal for global use.
+
+## Licence 
+The Coderbyte Ticket Purchase app is open source under the 
+[MIT](https://choosealicense.com/licenses/mit/)
+Feel free to mpdify and distribute the app as per the terms of the licence.
+
+## Contact
+For any questions or inquiries,please contact the project maintainer:
+
+- [![Connect on LinkedIn](https://img.shields.io/badge/--linkedin?label=LinkedIn&logo=LinkedIn&style=social)](https://www.linkedin.com/in/amos-koech-/)
+
+- [![Send me email](https://img.shields.io/badge/--gmail?label=Gmail&logo=Gmail&style=social)](mailto:koechronix@gmail.com)
