@@ -74,7 +74,7 @@ const Shows = () => {
                   {upcomingShow.title}
                 </h1>
                 <p className="text-sm text-primary-350">{upcomingShow.city} • {upcomingShow.country}</p>
-                <p className="text-sm text-primary-350">${upcomingShow.price.toFixed(2)}</p>
+                <p className="text-sm text-primary-350">Ksh{upcomingShow.price.toFixed(2)}</p>
                 <div className="flex justify-between">
                   <div className="flex items-center gap-x-2">
                     <p>Quantity</p>

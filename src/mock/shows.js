@@ -9,7 +9,7 @@ const shows = [
         "title": "The way to Power",
         "image": power,
         "price": 300,
-        "quantity": 0,
+        "quantity": 1,
         "city": "Nyayo, Nairobi",
     },
     {
@@ -17,7 +17,7 @@ const shows = [
         "title": "Hyper Focus",
         "image": focus,
         "price": 400,
-        "quantity": 0,
+        "quantity": 1,
         "city": "Kasarani, Nairobi",
     },
     {
@@ -25,7 +25,7 @@ const shows = [
         "title": "Atomic Habits",
         "image": habits,
         "price": 500,
-        "quantity": 0,
+        "quantity": 1,
         "city": "Jogoo, Nairobi",
     }
     
