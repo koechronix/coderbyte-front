@@ -51,7 +51,7 @@ const Invoice = () => {
           <div className="flex items-center justify-between text-xl font-semibold text-green-700">
             <h3>Total</h3>
             <div className="flex items-center gap-x-1">
-              <p>${total.toFixed(2)}</p>
+              <p>Ksh{total.toFixed(2)}</p>
               <button onClick={handleClick}>
                 {isOpen ? <ArrowUp /> : <ArrowDown />}
               </button>
@@ -63,8 +63,8 @@ const Invoice = () => {
                 <h4 className="mb-2 text-base font-semibold">Tickets</h4>
                 {cart?.items?.map( item => (
                 <div className="flex justify-between my-2 text-sm" key={item.id}>
-                  <p>{item.title.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}: ${item.price} x {item.quantity}</p>
-                  <p>${(item.price * item.quantity).toFixed(2)}</p>
+                  <p>{item.title.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}: Ksh{item.price} x {item.quantity}</p>
+                  <p>Ksh{(item.price * item.quantity).toFixed(2)}</p>
                 </div>))}
               </div>
             </div>
