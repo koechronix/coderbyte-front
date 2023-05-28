@@ -1,6 +1,6 @@
 import power from '../assets/images/power.jpeg';
 import focus from '../assets/images/focus.jpeg';
-import habits from '../assets/images/focus.jpeg';
+import habits from '../assets/images/habits.jpeg';
 
 
 const shows = [

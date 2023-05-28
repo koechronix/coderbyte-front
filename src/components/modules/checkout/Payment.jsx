@@ -15,7 +15,7 @@ const Payment = () => {
     <div className="border border-slate-300 bg-white p-4 rounded-[3px]">
       <div className="py-2 rounded-[3px] p-2 px-1.5 flex flex-col gap-y-2">
         <div className="flex flex-col items-center mb-4 text-lg font-semibold text-gray-700 md:flex-row md:justify-between md:mb-0">
-          <div className="flex items-center text-lg font-semibold text-gray-700 gap-x-2">
+          <div className="flex items-center text-lg font-semibold text-green-700 gap-x-2">
             <p className="text-xl">Payment</p>
             <CheckMark className="w-6 h-6" />
           </div>
