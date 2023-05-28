@@ -35,7 +35,7 @@ const Navbar = () => {
                 <Cart className="w-full h-full" />
               </div>
               <div>
-                <h3 className="font-bold text-red-700">My Cart</h3>
+                <h3 className="font-bold text-green-700">My Cart</h3>
                 <p className="text-gray-500">
                   {numberOfItemsInCart}{" "}
                   {numberOfItemsInCart <= 0 ? "item" : "items"}
