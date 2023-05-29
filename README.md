@@ -28,7 +28,7 @@ git clone https://github.com/koechronix/coderbyte-front
 2. Navigate to the project directory:
 
 ```bash
-cd coderbyte-project
+cd coderbyte-front
 ```
 
 3. Install dependecies using npm:
